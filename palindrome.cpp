@@ -4,8 +4,8 @@
 using namespace std;
 
 bool palindrome(char * st, int len){
-  for(int i =1 ; i<len-1; i++){
-    if((st[i-1] == st[i+1]) && (st[i] != st[i-1])){
+  for(int i =1 ; i<len; i++){
+    if((st[i-1] == st[i+1]) || (st[i] != st[i-1])){
       return true; 
     }
   }
