@@ -4,12 +4,14 @@
 using namespace std;
 
 bool palindrome(char * st, int len){
-  for(int i =1 ; i<len; i++){
-    if((st[i-1] == st[i+1]) || (st[i] != st[i-1])){
-      return true; 
-    }
+  int i = 0;
+  int j = len-1;
+  while(i<=j){
+    if(st[i] != st[j])
+      return false;
+    i++;
+    j--;
   }
-  return false;
 };
 
 int main(){
